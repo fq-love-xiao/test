@@ -1,1 +1,34 @@
+                           实现一个外卖APP的小项目
+
 elm  项目合作：周期一周，基本实现调用API来实现基本功能
+预定功能实现：
+      首页定位功能-
+      天气预报功能-
+      搜索功能
+      轮播图的实现
+      上啦加载功能
+      Iscroll功能
+      快速返回功能
+      跳转功能
+      吸顶效果实现
+      图片懒加载功能
+      店铺及其子页面的实现
+      子页面分类排序筛选的实现
+      食物详情页面及其相关页面的实现（吸顶-选项卡-点击加号动画效果实现）
+      结算功能
+      确定下单页面工能实现
+      商城的实现
+      支付功能的实现
+      调用地图功能的实现
+      
+ 项目技术栈：
+        Vue
+        Vuex
+        axios-fetch-router-resource
+        vue-router
+        webpack
+        mint-ui  (swiper)
+        Iscroll
+        ES6
+        
+ 参考资料：vue-elm  来源：https://github.com/bailicangdu/vue2-elm     
