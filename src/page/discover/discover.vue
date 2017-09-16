@@ -1,7 +1,9 @@
 <template>
+<div>
 	<p>{{msg}}</p>
+	<v-footer></v-footer>
+</div>
 </template>
-
 <script>
 	export default {
 		 name: 'Discover',

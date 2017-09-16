@@ -1,5 +1,8 @@
 <template>
+	<div>
 	<p>my my my </p>
+	<v-footer></v-footer>
+	</div>
 </template>
 
 <script>

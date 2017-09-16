@@ -1,5 +1,7 @@
 <template>
-	<div> order order order </div>
+	<div> 
+		<v-footer></v-footer>
+	</div>
 </template>
 
 <script>

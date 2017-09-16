@@ -2,21 +2,21 @@
     <div class="footer">
        <ul>
            <li>
-              <router-link to="/home">
-            <span class="iconfont icon-eliaomo"></span>              
+              <router-link to="/">
+            	<span class="iconfont icon-eliaomo"></span>              
                 <span>外卖</span>
               </router-link>
            </li>
             <li>
               <router-link to="/discover">
-                <span class="iconfont icon-faxian"></span>
+                  <span class="iconfont icon-faxian"></span>
                   <span>发现</span>
               </router-link>
            </li>
             <li>
               <router-link to="/order">
                <span class="iconfont icon-dingdan"></span>
-             <span>订单</span>
+             	<span>订单</span>
               </router-link>
            </li>
             <li>

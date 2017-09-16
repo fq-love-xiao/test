@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+
 Vue.use(Router)
 
 
@@ -15,15 +15,11 @@ const Order=myorder=>require(["../page/order/order"],myorder)//order
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    },{
     	path:'/test',
     	name:'Test',
     	component:mytest
     },{
-    	path:'/home',
+    	path:'/',
     	name:'Home',
     	component:Home,
     	children: [{
