@@ -27,7 +27,38 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+    	"/api":{
+            "target":"http://aura.maizuo.com/api",
+            "changeOrigin": true,
+            "pathRewrite": {
+            "^/api": ""
+            }
+          },
+           "/api2":{
+            "target":"http://www.baidu.com/api",
+            "changeOrigin": true,
+            "pathRewrite": {
+            "^/api": ""
+            }
+          }, 
+          "/loho88":{
+            "target":"http://m.loho88.com/",
+            "changeOrigin": true,
+            "pathRewrite": {
+            "^/loho88": ""
+            }
+            
+          },
+      "/elm": {
+          "target": "https://www.ele.me",
+          "changeOrigin": true,
+          "pathRewrite": {
+          "^/elm": ""
+            }
+        }
+     },
+    //  update  proxy  
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
