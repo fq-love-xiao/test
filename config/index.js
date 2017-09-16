@@ -23,7 +23,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 8020,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -55,6 +55,20 @@ module.exports = {
           "changeOrigin": true,
           "pathRewrite": {
           "^/elm": ""
+            }
+       },
+       "/ele": {
+          "target": "https://restapi.ele.me",
+          "changeOrigin": true,
+          "pathRewrite": {
+          "^/ele": ""
+            }
+       },
+       "/duiba": {
+          "target": "https://goods.m.duiba.com.cn",
+          "changeOrigin": true,
+          "pathRewrite": {
+          "^/duiba": ""
             }
         }
      },

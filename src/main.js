@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import vFooter from './components/footer/footer'
 import vHeader from './components/header/head'
+import VCommon from './components/common/common'
+import Header from './components/common/Header'
+
+
 import axios from 'axios' 
 import { IndexList, IndexSection } from 'mint-ui'
 import MintUI from 'mint-ui'
@@ -15,6 +19,8 @@ Vue.prototype.$http = axios
 //this.$http.get(url).then(res=>{ } )
 Vue.component("v-footer",vFooter);
 Vue.component("v-header",vHeader);
+Vue.component('v-common',VCommon)
+Vue.component('v-headera',Header)
 
 /* eslint-disable no-new */
 new Vue({
