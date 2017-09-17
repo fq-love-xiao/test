@@ -15,7 +15,7 @@
 	Vue.use(Vuex)
 	const store = new Vuex.State({
 		state:{
-			goodsList:[]
+			goodsList:[1,2,3]
 		},
 		mutations:{
 			
