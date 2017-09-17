@@ -17,8 +17,10 @@
 		state:{
 			goodsList:[1,2,3]
 		},
-		mutations:{
-			
+		computed:{
+			getData(){
+				
+			}
 		}
 	})
 </script>
