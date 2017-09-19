@@ -1,9 +1,0 @@
-<template>
-</template>
-
-<script>
-	var a = 1
-</script>
-
-<style>
-</style>

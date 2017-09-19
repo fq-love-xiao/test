@@ -1,17 +1,11 @@
+
 <template>  
   <div>
-    <ul>
-        <li>
-               <span @click="back" class="left"><</span>          
-        </li>
-        <li>
-                {{title}}        
-        </li>
-        <li>
-                <slot name="right"></slot>
-        </li>
-    </ul>
-  </div>    
+    <div id="header-banner">
+       <span @click="back" class="left-header"><</span>
+       	<p>{{title}}</p>
+     </div>
+  </div>
 </template>
 <script>
      export default {
@@ -19,7 +13,7 @@
         props:{
             title:{
                 type:String,
-                default:"default data"
+                default:"发现"
             }
         },
         methods:{
@@ -29,6 +23,29 @@
         }
     }
 </script>
-<style lang="">
-    
+<style lang="less">
+@import url("../../style/less/media.less");
+	#header-banner{
+	width:100%;
+	height:0.81rem;
+	background:#00a5ff;
+		.left-header{
+		font-size:0.34rem;
+		color:#fff;
+		display:block;
+		margin-top:0.12rem;
+		margin-left:0.17rem;
+		width:0.18rem;height:0.20rem;
+		float:left;
+		}
+		p{
+		text-align: center;
+		display:block;
+		font-size:0.34rem;
+		color:#fff;
+		line-height:0.81rem;
+		font-weight: bold;
+		}
+	}
+
 </style>
