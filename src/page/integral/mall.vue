@@ -55,6 +55,16 @@
 				<span class="wenzi">所有商品</span>
 			</router-link>
 		</div>
+		<!--nav2-->
+		<div class="Crab">
+			<img src="../../images/chichi1.png" alt="" class="imgzsc1"/>
+			<img src="../../images/chichi2.jpg" alt="" class="imgzsc2"/>
+			<img src="../../images/chichi3.jpg" alt="" class="imgzsc2"/>
+		</div>
+		<div class="dajiadui">
+			大家都在兑
+		</div>
+		<v-malist></v-malist>
 	</div>
 </template>
 
@@ -106,7 +116,6 @@
 		}
 	}
 	.nav-zsc{
-		float: left;
 		width:100%;
 		height:3.34rem;
 		background:#fff;
@@ -121,24 +130,78 @@
 			flex-direction:column;
 			justify-content:center;
 			align-items:flex-start;
+			margin-top:0.3rem;
 		.zscs{
 			float:left;
-			display:block;
+			font-size:0.40rem!important;
 			border-radius: 50%;
 			text-align: center;
 			margin-left:0.51rem;
-			/*width:0.85rem;*/
 			width:0.85rem;
 			height:0.85rem;
 			background:#42B983;
 			color:#fff;
-			
-			
+			line-height:0.84rem;
 		}
 		.wenzi{
-			
-			font-size:0.25rem;
+			margin-left:0.44rem;
+			font-size:0.11rem;
+			color:#666666;
+			margin-top:0.15rem;
 		}
 	}
+}
+.icon-zsc:nth-child(1) .zscs{
+	background: linear-gradient(#fd6d3b, #fc7650);
+}
+.icon-zsc:nth-child(2) .zscs{
+	background:#8fc31f!important;
+}
+.icon-zsc:nth-child(3) .zscs{
+	background: linear-gradient(#14cc74, #3bd78f);
+}
+.icon-zsc:nth-child(4) .zscs{
+	background: linear-gradient(#b670ff, #b395ff);
+}
+.icon-zsc:nth-child(5) .zscs{
+	background: linear-gradient(#ffa40c, #ffbb46);
+}
+.icon-zsc:nth-child(6) .zscs{
+	background: linear-gradient(#06c1ff, #63d8ff);
+}
+.icon-zsc:nth-child(7) .zscs{
+	background: linear-gradient(#f5604a, #fe8472);
+}
+.icon-zsc:nth-child(8) .zscs{
+	background: linear-gradient(#65b4ff, #65d7ff);
+}
+		
+		.Crab{
+			width:100%;
+			height:2.4rem;
+			background:#fff;
+			margin-bottom:0.1rem;
+			.imgzsc1{
+				width:3.55rem;
+				height:2.41rem;
+				float:left;
+			}
+			.imgzsc2{
+				float:right;
+				width:3.55rem;
+				height:1.18rem;
+			}
+		}
+.dajiadui{
+	width:100%;
+	height:0.68rem;
+	background:#fff;
+	margin-bottom:0.02rem solid #f0f0f0;
+	font-size:0.25rem;
+	line-height:0.68rem;
+	color:#6e6b64;
+	font-weight:900;
+	text-indent: 2em;
+	border-bottom: 0.02rem solid #f5f5f5;
 }
 </style>
