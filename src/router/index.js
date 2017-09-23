@@ -42,6 +42,10 @@ export default new Router({
     	path:'/order',
     	name:'Order',
     	component:Order
-    },
+    },{
+			path:'/my',
+    	name:'My',
+    	component:My
+		}
   ]
 })

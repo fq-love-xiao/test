@@ -3,7 +3,7 @@
        <ul>
            <li>
               <router-link to="/home">
-            <span class="iconfont icon-eliaomo"></span>              
+                <span class="iconfont icon-eliaomo"></span>              
                 <span>外卖</span>
               </router-link>
            </li>
@@ -34,8 +34,9 @@
 
     }
 </script>
-<style lang="">
-  
+<style lang="less" rel="stylesheet/less">
+    @import "../../style/less/media.less";
+    @import "../../style/css/base.css";
     .footer{
         position:fixed;
         left:0;
@@ -44,9 +45,18 @@
         height:50px;
         border-top:1px solid #ccc;
         background:#fff;
+        padding:0.1rem 0.2rem;
+        font-size:14px;
     }
     .footer ul li{
         float:left;
-        width:25%;
+        width:24%;
+        text-align:center;
     }
+    .iconfont{
+           display: block;
+            font-size:20px;
+            padding:0.1rem 0;
+            color:blue;
+        }
 </style>
