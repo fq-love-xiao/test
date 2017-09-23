@@ -2,11 +2,11 @@
 	<div>
 	
 			<div class="top-zsc" v-if="jifenglist.length>0">
-				<img :src="jifenglist[pid].imgss" />
+				<img :src="jifenglist[this.$route.params.pid].imgss" />
 			</div>
 			<div class="tiyanka" v-if="jifenglist[0]">
-				<p class="kkkk" v-text="jifenglist[pid].textt"></p>
-				<p class="jfeng" v-text="jifenglist[pid].jf"></p>
+				<p class="kkkk" v-text="jifenglist[this.$route.params.pid].textt"></p>
+				<p class="jfeng" v-text="jifenglist[this.$route.params.pid].jf"></p>
 			</div>
 		<div class="Commodity">
 			<div class="Commodity-content">
@@ -32,17 +32,30 @@
 </template>
 
 <script>
+ import {mapGetters} from 'vuex'
 	export default {
 		name:'Jflist',
-		
-		data(){
-			return {
-				jifenglist:[],
-				
+//		data(){
+//			return {
+//				jifenglist:[],
+//				
+//			}
+//		},
+		computed:{
+			jifenglist(){
+				//通过计算数据 实时接收数据
+				return this.$store.state.jifenLi.jifenglist
 			}
 		},
-	
-		mounted(){
+		mounted(){ //加载后
+			this.$store.dispatch("jifenLi/DetalltData")//挂载jifenli下面
+		}
+//	 computed:{
+//	 	  ...mapGetters("jifenLi",[
+//             "jifenglist"
+//          ])
+//	 },
+		/*mounted(){
 			this.pid = this.$route.params.pid   //用于判断选择的数据 123
 			//根据商品的id 获取详情数据
 			fetch("/static/jflist.json").then(res=>res.json())
@@ -51,7 +64,7 @@
 				console.log(this.jifenglist[this.pid].imgss )//123
 			}).catch(err=>console.log(err))
 			
-		}
+		}*/
 	}
 </script>
 
