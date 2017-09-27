@@ -63,7 +63,7 @@ elm  项目合作：周期一周，基本实现调用API来实现基本功能
 	 |__router        路由信息
 	 
 	 |__plugin          插件
-	        
+	        my.js      高德地图插件
 	       
 	 
 	 |__test           测试
@@ -93,7 +93,7 @@ elm  项目合作：周期一周，基本实现调用API来实现基本功能
   
   2：--- 展示图片：https://fuss10.elemecdn.com/8/a9/d470d4b2ca28f1a24824ca24d4827png.png?
  】
- 
+                                               拼接图片的静态资源地址
 2》爬取积分商城数据：
 	 【  for(var i=0;i<textarray.length;i++){
 var obj={};
@@ -105,9 +105,47 @@ console.log(arr); 】
 	 
  3》接口拆分业务逻辑的实现（vuex）
                             数据流向及其管理
+   首页数据解析--》
+   捕获数据--》
+   1）------
+   function copyCookie(str){ //str为cookie的数据（自己的）
+    var arr = str.split("; ");
+    arr.forEach(function(element) {document.cookie =  element  });}
+   2）-------- 
+   https://www.ele.me/restapi/shopping/restaurants
+   ?extras%5B%5D=activities
+   &geohash=wx4exb5q3rc
+   &latitude=39.99135
+   &limit=24
+   &longitude=116.36072
+   &offset=0
+   &terminal=web    
+   https://www.ele.me/restapi/shopping/v2/restaurant/
+   ?latitude=39.99135&longitude=116.36072  
+          分析 offset分页                    
+   3）------------ 
+            天气接口：                   http://localhost:8080/weather/v1/tab?lon=116.407526&lat=39.90403 
+          http://d7.weather.com.cn/fishing/api/v1/tab?lon=116.407526&lat=39.90403                        
  4》样式（选项卡的样式----下拉样式的问题集合）
+                
+ http://mint-ui.github.io/docs/#/en2/navbar
+ https://github.com/bailicangdu/vue2-elm/blob/master/src/components/common/shoplist.vue
   
-
+5> search 功能的实现
+    https://www.ele.me/restapi/shopping/restaurants/search
+    ?extras%5B%5D=activity
+    &keyword=%E8%82%AF%E5%BE%B7%E5%9F%BA
+    &latitude=39.99135&limit=100
+    &longitude=116.36072
+    &offset=0&terminal=web   //接口不可用
+    http://waimai.baidu.com/shopui
+    ?qt=shopdishsuggest
+    &addr_id=185e6cd1fcb9a08b
+    &word=k
+    &pre_only=0
+    &page_num=0
+    &range_num=5
+    &0.42436970627909965
           
  
  

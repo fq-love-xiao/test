@@ -11,7 +11,9 @@ const Home=homes=>require(["../page/home/home"],homes)//home 页面
 const Discover=cover=>require(["../page/discover/discover"],cover)//发现页面
 const My=mys=>require(["../page/my/my"],mys)//我的
 const Order=myorder=>require(["../page/order/order"],myorder)//order
-
+const Login=denglu=>require(["../page/login/login"],denglu)//login
+const Error=err=>require(["../page/error/error"],err)//404
+const Search=sear=>require(["../page/search/search"],sear)//ss
 export default new Router({
   routes: [
     {
@@ -22,6 +24,7 @@ export default new Router({
     	path:'/test',
     	name:'Test',
     	component:mytest
+    	
     },{
     	path:'/home',
     	name:'Home',
@@ -42,6 +45,23 @@ export default new Router({
     	path:'/order',
     	name:'Order',
     	component:Order
-    },
+    },{
+	  path: '/city',
+	  component: function (resolve) {
+	    require(['../page/city/city.vue'], resolve)
+	  }
+	},{
+		path:'/login',
+		name:'Login',
+    	component:Login
+	},
+	{
+		path:'/search',
+		name:'Search',
+    	component:Search	
+	},
+      { path: '/404', component:Error },
+	  { path: '*', redirect: '/404' }  //redirect 路由重定向
+	
   ]
 })

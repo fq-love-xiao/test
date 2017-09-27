@@ -56,7 +56,21 @@ module.exports = {
           "pathRewrite": {
           "^/elm": ""
             }
-        }
+        },
+      "/weather":{
+    	  "target": "http://d7.weather.com.cn/fishing/api",
+          "changeOrigin": true,
+          "pathRewrite": {
+          "^/weather": ""
+            }
+      }, 
+      "/search":{
+    	  "target": "http://waimai.baidu.com",
+          "changeOrigin": true,
+          "pathRewrite": {
+          "^/search": ""
+            }
+      },
      },
     //  update  proxy  
     // CSS Sourcemaps off by default because relative paths are "buggy"
@@ -64,6 +78,6 @@ module.exports = {
     // (https://github.com/webpack/css-loader#sourcemaps)
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
-    cssSourceMap: false
+    cssSourceMap: true
   }
 }

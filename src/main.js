@@ -8,13 +8,17 @@ import vHeader from './components/header/head'
 import axios from 'axios' 
 import { IndexList, IndexSection } from 'mint-ui'
 import MintUI from 'mint-ui'
-import IScroll from 'iscroll'
+import IScroll from 'iscroll' 
+import _glob from './components/common/methodCommon.vue'
+import Mapw from './components/header/mapw.vue'
 Vue.config.productionTip = false
+Vue.prototype.glob = _glob
 Vue.use(MintUI)
 Vue.prototype.$http = axios
 //this.$http.get(url).then(res=>{ } )
 Vue.component("v-footer",vFooter);
 Vue.component("v-header",vHeader);
+Vue.component("v-mapw",Mapw),
 
 /* eslint-disable no-new */
 new Vue({
