@@ -1,12 +1,17 @@
 <template>
 	<div>
-		<p  @click="add">home home home</p>
+		<!--<p  @click="add">home home home</p>-->
 		<v-header title="首页">
 			
 		</v-header>
+		 <v-banners>
+				
+		 </v-banners> 
+		 
 		<v-footer>
 			
 		</v-footer>
+	
 	</div>
 </template>
 
